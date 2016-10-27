@@ -1,7 +1,0 @@
-/Users/acain/Documents/Code/GitHub/splashkit/out/splashkit-linux/clib/CMakeFiles/edit_cache.dir
-/Users/acain/Documents/Code/GitHub/splashkit/out/splashkit-linux/clib/CMakeFiles/rebuild_cache.dir
-/Users/acain/Documents/Code/GitHub/splashkit/out/splashkit-linux/clib/CMakeFiles/list_install_components.dir
-/Users/acain/Documents/Code/GitHub/splashkit/out/splashkit-linux/clib/CMakeFiles/install.dir
-/Users/acain/Documents/Code/GitHub/splashkit/out/splashkit-linux/clib/CMakeFiles/install/strip.dir
-/Users/acain/Documents/Code/GitHub/splashkit/out/splashkit-linux/clib/CMakeFiles/install/local.dir
-/Users/acain/Documents/Code/GitHub/splashkit/out/splashkit-linux/clib/CMakeFiles/SplashKit.dir
