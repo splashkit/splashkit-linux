@@ -9,7 +9,7 @@ execute = function (argv, callback) {
   }
 
   const userArgs = utils.argsToString(argv['original_string'])
-  const clangArgs = `-L${sklibs.dynamic} -lSplashKit -L${sklibs.static} -lSplashKitCpp -I ${cppBuild}/include -rpath $ORIGIN -rpath ${sklibs.dynamic} -rpath /usr/local/lib`
+  const clangArgs = `-L${sklibs.dynamic} -lSplashKit -L${sklibs.static} -lSplashKitCpp -I ${cppBuild}/include -Wl,-rpath=$ORIGIN -Wl,-rpath=${sklibs.dynamic} -Wl,-rpath=/usr/local/lib`
 
   utils.runCommand(`clang++ ${clangArgs} ${userArgs}`, function (err, data) {
       if (err) {
