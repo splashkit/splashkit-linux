@@ -7,6 +7,7 @@ execute = function (argv, callback) {
   const userArgs = utils.argsToString(argv['original_string'])
   const skCSharpCode = `${home}/.splashkit/commands/mcs/SplashKit.cs`
   const skCSharpProgram = `${home}/.splashkit/commands/dotnet/Program.cs`
+  const dotnetArgs = `LD_LIBRARY_PATH=${home}/.splashkit/lib:$LD_LIBRARY_PATH`
 
   utils.runCommand(`${dotnetArgs} dotnet ${userArgs}`, function (err, data) {
       if (err) {

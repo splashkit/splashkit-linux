@@ -7,9 +7,11 @@ execute = function (argv, callback) {
   const skPasUnits = `${home}/.splashkit/commands/fpc`
 
   const userArgs = utils.argsToString(argv['original_string'])
-  const fpcArgs = `-S2 -Sh -Cg -Fu${skPasUnits} -k"-L${sklibs}" -k"-lSplashKit" -k"-rpath . -rpath ${sklibs} -rpath /usr/local/lib"`
+  const fpcArgs = `-S2 -Sh -Cg -Fu${skPasUnits} -k"-L${sklibs}" -k"-lSplashKit" -k"-rpath=$ORIGIN -rpath=${sklibs} -rpath=/usr/local/lib"`
 
-  utils.runCommand(`ppcx64 ${userArgs} ${fpcArgs}`, function (err, data) {
+  console.log(`fpc ${fpcArgs} ${userArgs}`)
+
+  utils.runCommand(`fpc ${fpcArgs} ${userArgs}`, function (err, data) {
       if (err) {
           callback(err)
       } else {
