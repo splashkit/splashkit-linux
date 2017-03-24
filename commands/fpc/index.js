@@ -9,8 +9,6 @@ execute = function (argv, callback) {
   const userArgs = utils.argsToString(argv['original_string'])
   const fpcArgs = `-S2 -Sh -Cg -Fu${skPasUnits} -k"-L${sklibs}" -k"-lSplashKit" -k"-rpath=$ORIGIN -rpath=${sklibs} -rpath=/usr/local/lib"`
 
-  console.log(`fpc ${fpcArgs} ${userArgs}`)
-
   utils.runCommand(`fpc ${fpcArgs} ${userArgs}`, function (err, data) {
       if (err) {
           callback(err)
