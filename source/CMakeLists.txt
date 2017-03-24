@@ -67,5 +67,4 @@ add_library(SplashKit SHARED ${SOURCE_FILES} ${SOURCE_FILES} ${INCLUDE_FILES})
 target_link_libraries(SplashKit ${LIB_FLAGS})
 target_link_libraries(SplashKit ${PNG_LIBRARY})
 
-install(TARGETS SplashKit DESTINATION usr/local/lib/)
-install(FILES ${SK_LIB_INCLUDE_FILE} DESTINATION usr/local/include)
+install(TARGETS SplashKit DESTINATION ~/.splashkit/lib)
