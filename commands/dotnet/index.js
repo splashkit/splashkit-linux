@@ -13,7 +13,7 @@ execute = function (argv, callback) {
       if (err) {
           callback()
       } else {
-          if ( argv["_"][1] == "new" ) {
+          if ( argv["_"][1] == "new" || argv["_"][1] == "restore") {
               utils.runCommand(`mkdir -p ./lib; ln -s "${skCSharpCode}" ./lib/SplashKit.cs; cp "${skCSharpProgram}" .`, function (err1, data) {
                   if (err1) {
                       callback(null, "I couldn't add in the SplashKit library... 😟 -- ${err1}")
