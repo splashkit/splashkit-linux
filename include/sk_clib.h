@@ -201,6 +201,13 @@ void __sklib__update_animation__animation__float(__sklib_animation anim, float p
 int __sklib__audio_ready();
 void __sklib__close_audio();
 void __sklib__open_audio();
+double __sklib__convert_to_double__string_ref(const __sklib_string text);
+int __sklib__convert_to_integer__string_ref(const __sklib_string text);
+int __sklib__is_integer__string_ref(const __sklib_string text);
+int __sklib__is_number__string_ref(const __sklib_string text);
+__sklib_string __sklib__to_lowercase__string_ref(const __sklib_string text);
+__sklib_string __sklib__to_uppercase__string_ref(const __sklib_string text);
+__sklib_string __sklib__trim__string_ref(const __sklib_string text);
 void __sklib__free_resource_bundle__string(const __sklib_string name);
 int __sklib__has_resource_bundle__string_ref(const __sklib_string name);
 void __sklib__load_resource_bundle__string_ref__string_ref(const __sklib_string name, const __sklib_string filename);
@@ -1086,9 +1093,13 @@ void __sklib__set_terminal_colors__color__color(__sklib_color foreground, __skli
 void __sklib__set_terminal_echo_input__bool(int value);
 int __sklib__terminal_height();
 int __sklib__terminal_width();
+void __sklib__write__double(double data);
+void __sklib__write__int(int data);
 void __sklib__write__string(__sklib_string text);
 void __sklib__write_at__string__int__int(__sklib_string text, int x, int y);
 void __sklib__write_line();
+void __sklib__write_line__double(double data);
+void __sklib__write_line__int(int data);
 void __sklib__write_line__string(__sklib_string line);
 void __sklib__draw_text__string_ref__color_ref__string_ref__int__double__double(const __sklib_string text, const __sklib_color clr, const __sklib_string fnt, int font_size, double x, double y);
 void __sklib__draw_text__string_ref__color_ref__string_ref__int__double__double__drawing_options_ref(const __sklib_string text, const __sklib_color clr, const __sklib_string fnt, int font_size, double x, double y, const __sklib_drawing_options opts);

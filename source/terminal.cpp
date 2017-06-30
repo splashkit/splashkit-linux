@@ -219,6 +219,16 @@ namespace splashkit_lib
         else
             cout << text;
     }
+    
+    void write(int data)
+    {
+        write(to_string(data));
+    }
+    
+    void write(double data)
+    {
+        write(to_string(data));
+    }
 
     void write_line()
     {
@@ -234,6 +244,16 @@ namespace splashkit_lib
             printw("%s\n", line.c_str());
         else
             cout << line << endl;
+    }
+    
+    void write_line(int data)
+    {
+        write_line(to_string(data));
+    }
+    
+    void write_line(double data)
+    {
+        write_line(to_string(data));
     }
 
     int terminal_width()
@@ -309,7 +329,7 @@ namespace splashkit_lib
         if ( not _ncurses_active )
         {
             string result;
-            cin >> result;
+            getline(std::cin, result);
             return result;
         }
         else
