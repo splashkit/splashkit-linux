@@ -9,7 +9,7 @@ execute = function (argv, callback) {
       "c++": {
           "files": `${home}/.splashkit/commands/new/c++`,
           "proc": function ( ) {
-            utils.runCommand(`ln -f -s "${home}/.splashkit/commands/clang++/include" ./include/splashkit`, function (err1, data) {
+            utils.runCommand(`mkdir -p include; ln -f -s "${home}/.splashkit/commands/clang++/include" ./include/splashkit`, function (err1, data) {
                     if (err1) {
                         callback(`Failed to link in splashkit header files ${err1}`)
                     }
@@ -27,7 +27,7 @@ execute = function (argv, callback) {
 
   if ( userLang in skLanguageResources )
   {
-    utils.runCommand(`cp -r -n "${skLanguageResources[userLang]["files"]}/" .`, function (err1, data) {
+    utils.runCommand(`cp -r -n "${skLanguageResources[userLang]["files"]}"/* .`, function (err1, data) {
         if (err1) {
             callback(err1)
             return
