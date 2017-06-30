@@ -15,6 +15,11 @@ execute = function (argv, callback) {
                     }
                 })
           }
+      },
+      "fpc": {
+          "files": `${home}/.splashkit/commands/new/fpc`,
+          "proc": function ( ) {
+          }
       }
   }
 
