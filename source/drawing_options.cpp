@@ -31,6 +31,7 @@ namespace splashkit_lib
         result.camera	 		= DRAW_DEFAULT;
         result.line_width 		= 1;
         result.anim             = nullptr;
+        result.draw_cell        = -1;
 
         return result;
     }
@@ -190,5 +191,16 @@ namespace splashkit_lib
     {
         opts.anim = anim;
         return opts;
+    }
+    
+    drawing_options option_with_bitmap_cell(int cell, drawing_options opts)
+    {
+        opts.draw_cell = cell;
+        return opts;
+    }
+    
+    drawing_options option_with_bitmap_cell(int cell)
+    {
+        return option_with_bitmap_cell(cell, option_defaults());
     }
 }
