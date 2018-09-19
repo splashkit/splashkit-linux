@@ -12,8 +12,9 @@
 #define window_manager_hpp
 
 #include "color.h"
+
 #include <string>
-using namespace std;
+using std::string;
 
 namespace splashkit_lib
 {
@@ -186,8 +187,7 @@ namespace splashkit_lib
      *
      * @param name The name of the window to close
      *
-     * @returns Returns `true` if there is a music file with the given `name`
-     *                  has has been loaded.
+     * @returns Returns `true` if the window has been asked to close.
      *
      * @attribute suffix  named
      */

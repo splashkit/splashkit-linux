@@ -12,7 +12,8 @@
 #include "backend_types.h"
 
 #include <string>
-using namespace std;
+using std::string;
+
 namespace splashkit_lib
 {
     struct sk_database
@@ -28,8 +29,10 @@ namespace splashkit_lib
     {
         pointer_identifier id;
 
+        sk_database *_database;
         void *_stmt;
         int _result;
+        int _error_code;
     };
 
     /**
@@ -40,6 +43,8 @@ namespace splashkit_lib
     int sk_close_database(sk_database *db);
 
     int sk_step_statement(sk_query_result *result);
+    
+    string sk_db_error_message(sk_query_result *result);
 
     int sk_rows_affected(sk_database *db);
 
